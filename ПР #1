@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-		int month = 1;
+		int month = 1;  //Ввожу переменные
 		int months;
 		double percent;
 		double amount;
@@ -12,20 +12,20 @@ public class Main
 		double total_income = 0;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Please, enter the duration of the deposite in months");
+		System.out.println("Please, enter the duration of the deposite in months"); //Ввод с клавиатуры количество месяцев 
 		months = scan.nextInt();
-		System.out.println("Please, enter the monthly percent");
+		System.out.println("Please, enter the monthly percent");  //Ввод с клавиатуры процентов 
 		percent = scan.nextDouble();
-		System.out.println("Please, enter the initian deposit amount");
+		System.out.println("Please, enter the initian deposit amount");  //Ввод с клавиатуры суммы
 		amount = scan.nextDouble();
 		
-		while(month <= months){
-		    monthly_income = (amount * percent /100);
+		while(month <= months){   //цикл while с условие достижения заданных месяцев
+		    monthly_income = (amount * percent /100); //расчет ежемесячных процентов 
 		    System.out.println("monthly income " + month + " = " + monthly_income);
-		    amount = amount + monthly_income;
+		    amount = amount + monthly_income; //условие, при котором к изначальной сумме прибавляется процент и уже от этой суммы считается процент след.месяца
 		    month++;
-		    total_income += monthly_income;
+		    total_income += monthly_income; //подсчет итоговой суммы выплаченных процентов
 		}
-		    System.out.println("total income = "+ total_income);
+		    System.out.println("total income = "+ total_income);  //вывод в консоль итоговой суммы выплаченных процентов 
 	}
 }
