@@ -12,7 +12,7 @@ public class Main
 		double total_income = 0;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Please, enter the duration of the deposite in months"); //Ввод с клавиатуры количество месяцев 
+		System.out.println("Please, enter the duration of the deposite in months"); //Ввод с клавиатуры количества месяцев 
 		months = scan.nextInt();
 		System.out.println("Please, enter the monthly percent");  //Ввод с клавиатуры процентов 
 		percent = scan.nextDouble();
