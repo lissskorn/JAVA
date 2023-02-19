@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		int month = 1;
+		int months;
+		double percent;
+		double amount;
+		double monthly_income = 0;
+		double total_income = 0;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please, enter the duration of the deposite in months");
+		months = scan.nextInt();
+		System.out.println("Please, enter the monthly percent");
+		percent = scan.nextDouble();
+		System.out.println("Please, enter the initian deposit amount");
+		amount = scan.nextDouble();
+		
+		while(month <= months){
+		    monthly_income = (amount * percent /100);
+		    System.out.println("monthly income " + month + " = " + monthly_income);
+		    amount = amount + monthly_income;
+		    month++;
+		    total_income += monthly_income;
+		}
+		    System.out.println("total income = "+ total_income);
+	}
+}
